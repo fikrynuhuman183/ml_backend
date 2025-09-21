@@ -33,17 +33,9 @@ def classify():
         if image_path is None:
             return jsonify({'error': 'Image not found'}), 404
         
+        # Use only H5 model prediction
         pred = util.nnPredict(image_path)
-
-
-        entry = util.findEntry(filename)
-        if isinstance(entry, int):
-            finalPred=pred[0]            
-        else:
-            pred_meta = util.metaPredict(entry)
-            finalPred = util.calculate_total(pred, pred_meta)[0]
-
-
+        finalPred = pred[0]  # Get the first (and only) prediction
 
         return jsonify({
             'result': {
@@ -57,4 +49,4 @@ def classify():
 
 
 if __name__ == '__main__':
-    app.run(port=os.getenv('PORT'))
+    app.run(host='0.0.0.0', port=int(os.getenv('PORT', 5000)))
