@@ -19,7 +19,7 @@ def nnPredict(image_path: str):
     Returns:
         numpy.ndarray: Prediction probabilities for [benign, healthy, opmd]
     """
-    model = tf.keras.models.load_model(os.getenv('H5_FILE_PATH'))
+    model = tf.keras.models.load_model('Densenet201(Original Images).h5')
     img = Image.open(image_path)
     img = img.resize((img_height, img_width))
     img_array = np.reshape(img, (1, img_height, img_width, 3))
