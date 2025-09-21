@@ -1,0 +1,42 @@
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+ml_backend_env/
+venv/
+env/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+README.md
+*.md
+
+# Test files
+test.ipynb
+*.ipynb
+
+# Logs
+*.log
+
+# Environment files (copy specific ones if needed)
+.env
+
+# Requirements files we don't need (we're using requirements_pip.txt)
+requirements.txt

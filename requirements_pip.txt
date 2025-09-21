@@ -1,0 +1,12 @@
+flask
+flask-cors
+python-dotenv
+pandas
+pillow
+tensorflow
+numpy
+scikit-learn
+xgboost
+opencv-python
+matplotlib
+seaborn
